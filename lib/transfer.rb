@@ -26,11 +26,11 @@ def execute_transaction
 end
 
 def reverse_transfer
-  @status=="pending"
-  self.receiver.balance=receiver.balance-amount
-  self.receiver.balance
-  self.sender.balance=sender.balance-amount
-  @status="reversed"
+  if @status=="pending"
+    self.receiver.balance=receiver.balance-amount
+    self.sender.balance=sender.balance-amount
+    @status="reversed"
+  end
 end
 
 end
