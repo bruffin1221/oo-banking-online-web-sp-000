@@ -32,7 +32,6 @@ def reverse_transfer
     receiver.balance=receiver.balance+amount
     receiver.balance
     @status="reversed"
-    binding.pry
   end
 end
 
