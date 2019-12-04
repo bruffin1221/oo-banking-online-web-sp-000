@@ -27,10 +27,10 @@ end
 
 def reverse_transfer
   if @status=="pending"
-    receiver.balance=receiver.balance-amount
-    receiver.balance
     sender.balance=sender.balance-amount
     sender.balance
+    receiver.balance=receiver.balance-amount
+    receiver.balance
     @status="reversed"
   end
 end
